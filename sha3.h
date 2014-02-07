@@ -9,7 +9,7 @@
 NAMESPACE_BEGIN(CryptoPP)
 
 /// <a href="http://en.wikipedia.org/wiki/SHA-3">SHA-3</a>
-class SHA3 : public HashTransformation
+class CRYPTOPP_DLL SHA3 : public HashTransformation
 {
 public:
 	SHA3(unsigned int digestSize) : m_digestSize(digestSize) {Restart();}
@@ -28,7 +28,7 @@ protected:
 	unsigned int m_digestSize, m_counter;
 };
 
-class SHA3_224 : public SHA3
+class CRYPTOPP_DLL SHA3_224 : public SHA3
 {
 public:
 	CRYPTOPP_CONSTANT(DIGESTSIZE = 28)
@@ -36,7 +36,7 @@ public:
 	static const char * StaticAlgorithmName() {return "SHA-3-224";}
 };
 
-class SHA3_256 : public SHA3
+class CRYPTOPP_DLL SHA3_256 : public SHA3
 {
 public:
 	CRYPTOPP_CONSTANT(DIGESTSIZE = 32)
@@ -44,7 +44,7 @@ public:
 	static const char * StaticAlgorithmName() {return "SHA-3-256";}
 };
 
-class SHA3_384 : public SHA3
+class CRYPTOPP_DLL SHA3_384 : public SHA3
 {
 public:
 	CRYPTOPP_CONSTANT(DIGESTSIZE = 48)
@@ -52,7 +52,7 @@ public:
 	static const char * StaticAlgorithmName() {return "SHA-3-384";}
 };
 
-class SHA3_512 : public SHA3
+class CRYPTOPP_DLL SHA3_512 : public SHA3
 {
 public:
 	CRYPTOPP_CONSTANT(DIGESTSIZE = 64)

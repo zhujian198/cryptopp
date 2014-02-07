@@ -42,15 +42,15 @@ CRYPTOPP_DLL MessageAuthenticationCode * CRYPTOPP_API NewIntegrityCheckingMAC();
 CRYPTOPP_DLL bool CRYPTOPP_API IntegrityCheckModule(const char *moduleFilename, const byte *expectedModuleMac, SecByteBlock *pActualMac = NULL, unsigned long *pMacFileLocation = NULL);
 
 // this is used by Algorithm constructor to allow Algorithm objects to be constructed for the self test
-bool PowerUpSelfTestInProgressOnThisThread();
+CRYPTOPP_DLL bool PowerUpSelfTestInProgressOnThisThread();
 
-void SetPowerUpSelfTestInProgressOnThisThread(bool inProgress);
+CRYPTOPP_DLL void SetPowerUpSelfTestInProgressOnThisThread(bool inProgress);
 
-void SignaturePairwiseConsistencyTest(const PK_Signer &signer, const PK_Verifier &verifier);
-void EncryptionPairwiseConsistencyTest(const PK_Encryptor &encryptor, const PK_Decryptor &decryptor);
+CRYPTOPP_DLL void SignaturePairwiseConsistencyTest(const PK_Signer &signer, const PK_Verifier &verifier);
+CRYPTOPP_DLL void EncryptionPairwiseConsistencyTest(const PK_Encryptor &encryptor, const PK_Decryptor &decryptor);
 
-void SignaturePairwiseConsistencyTest_FIPS_140_Only(const PK_Signer &signer, const PK_Verifier &verifier);
-void EncryptionPairwiseConsistencyTest_FIPS_140_Only(const PK_Encryptor &encryptor, const PK_Decryptor &decryptor);
+CRYPTOPP_DLL void SignaturePairwiseConsistencyTest_FIPS_140_Only(const PK_Signer &signer, const PK_Verifier &verifier);
+CRYPTOPP_DLL void EncryptionPairwiseConsistencyTest_FIPS_140_Only(const PK_Encryptor &encryptor, const PK_Decryptor &decryptor);
 
 #define CRYPTOPP_DUMMY_DLL_MAC "MAC_51f34b8db820ae8"
 

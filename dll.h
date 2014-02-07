@@ -36,6 +36,8 @@
 #include "sha.h"
 #include "skipjack.h"
 #include "trdlocal.h"
+#include "sha3.h"
+#include "ripemd.h"
 
 #ifdef CRYPTOPP_IMPORTS
 
